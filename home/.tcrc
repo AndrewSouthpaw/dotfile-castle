@@ -1,0 +1,61 @@
+# export s3_access_key_id=0YPT7WWQX7JEK6H19RG2
+# export s3_secret_access_key=ApAksvBVVQLDJFo9DqrCitX/bvaNWr1WVZpOxGdN
+
+export FACEBOOK_APP_ID=347003312039920
+export FACEBOOK_APP_SECRET=23a6166f782be3496e3ff2fb8b0f5466
+
+export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/local/heroku/bin:$PATH
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+	
+# NVM
+export NVM_DIR="$HOME/.nvm"
+export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node-modules
+. "/usr/local/opt/nvm/nvm.sh"
+
+# aliases
+alias r=rails
+alias tc='cd ~/src/transparentclassroom'
+alias gtc='cd "/Volumes/GoogleDrive/Team Drives/Transparent Classroom"'
+alias ls='ls -FGa'
+alias ll='ls -l'
+alias im=i18n-migrate
+alias localip="ipconfig getifaddr en0"
+alias g=git
+alias flow='./node_modules/flow-bin/vendor/flow'
+
+# Add tab completion for bash completion 2
+if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
+  source "$(brew --prefix)/share/bash-completion/bash_completion";
+elif [ -f /etc/bash_completion ]; then
+  source /etc/bash_completion;
+fi;
+
+# add git completion
+source "$HOME/.git-completion.bash"
+
+# Enable tab completion for `g` by marking it as an alias for `git`
+if type _git &> /dev/null && [ -f ~/.git-completion.bash ]; then
+  complete -o default -o nospace -F _git g;
+fi;
+
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+# set -o vi
+
+function timer_start {
+  timer=${timer:-$SECONDS}
+}
+
+function timer_stop {
+  timer_show=$(($SECONDS - $timer))
+  unset timer
+}
+
+trap 'timer_start' DEBUG
+PROMPT_COMMAND=timer_stop
+
+source .bash_prompt
+
+complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
