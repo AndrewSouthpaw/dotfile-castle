@@ -1,3 +1,5 @@
+# Aliases specific to Transparent Classroom stuff
+
 # Expected to be run from root directory
 alias im='i18n-migrate'
 alias imref='i18n-migrate rollback && i18n-migrate migrate && rake i18n:js:export'

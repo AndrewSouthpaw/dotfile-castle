@@ -58,6 +58,7 @@ brew install tree
 brew install imagemagick
 brew install rename
 brew install speedtest_cli
+brew install awscli
 
 # Install font tools.
 #brew tap bramstein/webfonttools
