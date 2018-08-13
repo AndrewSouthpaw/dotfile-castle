@@ -1,4 +1,5 @@
 [alias]
+
   # View abbreviated SHA, description, and history graph of the latest 20 commits
   l = log --graph --decorate --pretty=oneline --abbrev-commit --all
 
@@ -21,9 +22,12 @@
   pu = push
   puo = push origin
   pl = pull
-  plr = pull --rebase
   plo = pull origin
   plm = !"git checkout master && git pull origin master"
+  plr = pull origin --rebase
+  rb = rebase --committer-date-is-author-date
+  rbo = rebase --committer-date-is-author-date --onto
+  rbc = rebase --continue
 
   # Clear unstaged changes
   cl = checkout -- .
@@ -46,13 +50,11 @@
   foor = rebase foo
   food = branch -d foo
 
-  rc = rebase --continue
+  # Clone a repository including all submodules
+  cloner = clone --recursive
 
   # Rebase off an updated master
   branchupdate = !"git checkout master; git pull; git checkout -; git rebase master --committer-date-is-author-date"
-
-  # Clone a repository including all submodules
-  cloner = clone --recursive
 
   # Commit all changes
   ca = !git add -A && git commit -av
@@ -188,7 +190,7 @@
 [help]
 
   # Automatically correct and execute mistyped commands
-  autocorrect = 0
+  # autocorrect = 5
 
 [merge]
 
@@ -223,16 +225,12 @@
   pushInsteadOf = "gist:"
   pushInsteadOf = "git://gist.github.com/"
 
+[url "https://github.com/"]
+  insteadOf = "ghh:"
+
 [url "git://gist.github.com/"]
 
   insteadOf = "gist:"
-
-[url "https://github.com/"]
-  insteadOf = "ghh:"
-[gui]
-  recentrepo = /Users/andrew/Projects/TransparentClassroom
 [user]
+	name = OverwriteMe
 	email = notmy@email.com
-	name = TC Dev
-[github]
-	user = shouldoverwritethis
