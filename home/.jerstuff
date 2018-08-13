@@ -1,0 +1,22 @@
+# aliases
+alias r=rails
+alias tc='cd ~/src/transparentclassroom'
+alias gtc='cd "/Volumes/GoogleDrive/Team Drives/Transparent Classroom"'
+alias ls='ls -FGa'
+alias ll='ls -l'
+alias im=i18n-migrate
+alias localip="ipconfig getifaddr en0"
+alias g=git
+alias flow='./node_modules/flow-bin/vendor/flow'
+
+
+
+export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/local/heroku/bin:$PATH
+
+
+
+# export s3_access_key_id=0YPT7WWQX7JEK6H19RG2
+# export s3_secret_access_key=ApAksvBVVQLDJFo9DqrCitX/bvaNWr1WVZpOxGdN
+
+export FACEBOOK_APP_ID=347003312039920
+export FACEBOOK_APP_SECRET=23a6166f782be3496e3ff2fb8b0f5466
