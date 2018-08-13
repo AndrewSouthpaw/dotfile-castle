@@ -19,14 +19,14 @@ homeshick clone transparentclassroom/tc-castle
 You'll need to source the "root" of these dotfiles in your `.bash_profile` or `.bashrc`, whatever makes sense to you:
 
 ```bash
-source "./tc_bash_profile"
+source ~/.tc_bash_profile
 ```
 
 If you want to extend your `.gitconfig` with ours, just replace yours with:
 
 ```
-[core]
-  include = ./tc_gitconfig
+[include]
+  path = ./.tc_gitconfig
 [user]
   name = Your Name
   email = your@email.com
