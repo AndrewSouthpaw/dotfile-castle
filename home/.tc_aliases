@@ -21,6 +21,7 @@ alias lint='yarn fast-lint'
 # navigation
 alias tc='cd ~/Projects/TransparentClassroom'
 alias tcn='cd ~/Projects/TransparentClassroom/frontend/native'
+alias gtc='cd "/Volumes/GoogleDrive/Team Drives/Transparent Classroom"'
 
 # server
 alias findrails='lsof -n -i4TCP:3000'
