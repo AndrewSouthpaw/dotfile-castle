@@ -14,8 +14,8 @@ alias rdbm='bin/rdbm'
 alias rdbr='bin/rdbr'
 
 # testing
-alias yt='yarn test:watch'
-alias yta='yarn test'
+alias yt='make test_js_watch'
+alias yta='make test_js'
 alias lint='yarn fast-lint'
 
 # navigation
