@@ -52,7 +52,7 @@ brew install homebrew/dupes/screen
 
 # other tools
 brew install nvm
-brew install yarn
+brew install yarn --without-node
 brew install graphviz
 brew install tree
 brew install imagemagick
