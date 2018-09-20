@@ -15,6 +15,7 @@
   st = status
   b = branch
   bd = branch -d
+  db = branch -d
   bD = branch -D
   m = merge
   a = add

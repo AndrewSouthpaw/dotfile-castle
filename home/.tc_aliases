@@ -7,16 +7,16 @@ alias imme='i18n-migrate migrate && rake i18n:js:export'
 alias imr='i18n-migrate rollback'
 alias tcps='bin/pull_school -s'
 alias rs='rails server'
-alias rsip='bin/rsip'
-alias wp='bin/webpack_dev_server'
-alias wpip='bin/wpip'
+alias rsip='make rails_ip'
+alias wp='make webpack_start'
+alias wpip='make webpack_start_ip'
 alias rdbm='bin/rdbm'
 alias rdbr='bin/rdbr'
 
 # testing
 alias yt='make test_js_watch'
 alias yta='make test_js'
-alias lint='yarn fast-lint'
+alias lint='make fast_lint'
 
 # navigation
 alias tc='cd ~/Projects/TransparentClassroom'
