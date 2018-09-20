@@ -12,6 +12,8 @@ alias wp='make webpack_start'
 alias wpip='make webpack_start_ip'
 alias rdbm='bin/rdbm'
 alias rdbr='bin/rdbr'
+alias swu='bin/switch_pair_wip_up.sh'
+alias swd='bin/switch_pair_wip_down.sh'
 
 # testing
 alias yt='make test_js_watch'
