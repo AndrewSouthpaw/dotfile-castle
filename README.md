@@ -16,7 +16,7 @@ If there's collisions that are irresolvable, we can rename the dotfiles in the T
 homeshick clone transparentclassroom/tc-castle
 ```
 
-You'll need to source the "root" of these dotfiles in your `.bash_profile` or `.bashrc`, whatever makes sense to you:
+You'll need to source the "root" of these dotfiles in your `.bash_profile`:
 
 ```bash
 source ~/.tc_bash_profile
