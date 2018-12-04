@@ -46,3 +46,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Makefile completion
 complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
+
+# Enable homeshick `cd` command
+export HOMESHICK_DIR=/usr/local/opt/homeshick
+source "/usr/local/opt/homeshick/homeshick.sh"
