@@ -9,7 +9,6 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
@@ -172,3 +171,6 @@ alias r='rails'
 
 # Flow shortcut
 alias flow='./node_modules/flow-bin/vendor/flow'
+
+# Catch my attention
+alias y='say "yo"'

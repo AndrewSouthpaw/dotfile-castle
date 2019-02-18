@@ -18,6 +18,7 @@ alias swd='bin/switch_pair_wip_down.sh'
 # testing
 alias yt='make test_js_watch'
 alias yta='make test_js'
+alias ytau='make test_js_update'
 alias lint='make fast_lint'
 
 # navigation
@@ -27,3 +28,5 @@ alias gtc='cd "/Volumes/GoogleDrive/Team Drives/Transparent Classroom"'
 
 # server
 alias findrails='lsof -n -i4TCP:3000'
+# kill everything rails related; useful when it becomes undead
+alias killrails='pkill -9 -f "rb-fsevent|rails|spring|puma"'
