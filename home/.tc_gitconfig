@@ -55,7 +55,7 @@
   cloner = clone --recursive
 
   # Rebase off an updated master
-  branchupdate = !"git checkout master; git pull; git checkout -; git rebase master --committer-date-is-author-date"
+  branchupdate = "!r() { echo Functionality moved to shell command branchupdate; }; r"
 
   # Commit all changes
   ca = !git add -A && git commit -av

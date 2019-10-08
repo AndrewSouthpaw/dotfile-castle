@@ -260,3 +260,13 @@ function hiddenFiles() {
 function findPorts() {
   lsof -i :$1
 }
+
+# Safely kill gitx program
+function kill_gitx(){
+  kill $(ps -ax | grep GitX.app | grep -v grep | head -1 | cut -d ' ' -f1) > /dev/null 2> /dev/null
+}
+
+# Rebase a current branch off the latest master
+function branchupdate() {
+  kill_gitx; git checkout master; git pull; git checkout -; git rebase master --committer-date-is-author-date; gitx;
+}
