@@ -60,6 +60,7 @@ brew install speedtest_cli
 brew install awscli
 brew install heroku/brew/heroku
 brew install watchman
+brew install ripgrep
 
 # icu4c is used by charlock_holmes, a package used in TC
 brew install icu4c

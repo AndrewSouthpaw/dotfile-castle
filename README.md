@@ -32,15 +32,6 @@ If you want to extend your `.gitconfig` with ours, just replace yours with:
   email = your@email.com
 ```
 
-You'll need TC AWS access keys set as environment variables, the access key for your AWS IAM user. You can put stuff like this in `.bash_profile` or there's a file that is autoloaded called `.extra` that you could use.
-
-```
-# TC AWS Credentials (personal)
-export AMAZON_REGION=us-east-1
-export AMAZON_ACCESS_KEY_ID=...
-export AMAZON_SECRET_ACCESS_KEY=...
-```
-
 Then, you can install a bunch of useful tooling with `brew.sh` that's now in your `$HOME` directory.
 
 ```bash

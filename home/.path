@@ -3,6 +3,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# add postgresql 10, needed because it's not a standard install
+PATH="/usr/local/opt/postgresql@10/bin:$PATH"
+
 # Add RVM to PATH for scripting
 PATH="$PATH:$HOME/.rvm/bin"
 
@@ -14,6 +17,10 @@ PATH=/usr/local/opt/openssl/bin:$PATH
 
 # Add `~/bin` to the `$PATH`
 PATH="$HOME/bin:$PATH";
+
+# Add Android SDK
+export ANDROID_HOME=/Users/andrew/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
