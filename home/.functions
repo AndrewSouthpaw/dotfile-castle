@@ -268,5 +268,5 @@ function kill_gitx(){
 
 # Rebase a current branch off the latest master
 function branchupdate() {
-  kill_gitx; git checkout master; git pull; git checkout -; git rebase master --committer-date-is-author-date; gitx;
+  git checkout master; git pull; git checkout -; git rebase master --committer-date-is-author-date;
 }
