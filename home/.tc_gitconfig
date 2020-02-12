@@ -22,6 +22,8 @@
   cp = cherry-pick
   pu = push
   puo = push origin
+  puon = push origin --no-verify
+  puonf = push origin --no-verify --force-with-lease
   pl = pull
   plo = pull origin
   plm = !"git checkout master && git pull origin master"
