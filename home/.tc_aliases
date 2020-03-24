@@ -1,10 +1,9 @@
 # Aliases specific to Transparent Classroom stuff
 
 # Expected to be run from root directory
-alias im='i18n-migrate'
-alias imref='i18n-migrate rollback && i18n-migrate migrate && rake i18n:js:export'
-alias imme='i18n-migrate migrate && rake i18n:js:export'
-alias imr='i18n-migrate rollback'
+alias imref='make im_rollback && make im_migrate'
+alias imme='make im_migrate'
+alias imr='make im_rollback'
 alias tcps='bin/pull_school -s'
 alias rs='rails server'
 alias rsip='make rails_ip'
