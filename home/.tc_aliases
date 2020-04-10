@@ -1,8 +1,11 @@
 # Aliases specific to Transparent Classroom stuff
 
 # Expected to be run from root directory
+alias im='i18n-migrate'
 alias imref='make im_rollback && make im_migrate'
 alias imme='make im_migrate'
+alias imen='i18n-migrate migrate en'
+alias imenr='i18n-migrate rollback en'
 alias imr='make im_rollback'
 alias tcps='bin/pull_school -s'
 alias rs='rails server'
@@ -13,6 +16,9 @@ alias rdbm='bin/rdbm'
 alias rdbr='bin/rdbr'
 alias swu='bin/switch_pair_wip_up.sh'
 alias swd='bin/switch_pair_wip_down.sh'
+
+# check for whether modules are ES5-compatible
+alias es5='npx are-you-es5 check .'
 
 # testing
 alias yt='make test_js_watch'
