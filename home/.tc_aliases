@@ -23,6 +23,7 @@ alias es5='npx are-you-es5 check .'
 # testing
 alias yt='make test_js_watch'
 alias yta='make test_js'
+alias ytaa='make test_js_all'
 alias ytau='make test_js_update'
 alias lint='make fast_lint'
 
