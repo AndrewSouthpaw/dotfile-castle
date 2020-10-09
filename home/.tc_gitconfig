@@ -37,6 +37,7 @@
 
   # Reset to the previous commit
   res = reset HEAD^
+  resh = reset --hard HEAD^
 
   # Show the diff between the latest commit and the current state
   d = !"git diff-index --quiet HEAD -- || clear; git diff --patch-with-stat"

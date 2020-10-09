@@ -270,3 +270,14 @@ function kill_gitx(){
 function branchupdate() {
   git checkout master; git pull; git checkout -; git rebase master --committer-date-is-author-date;
 }
+
+# sets to GMT timezone
+function setGMT() {
+  echo "Setting to GMT timezone."
+  sudo systemsetup -settimezone GMT
+}
+
+function setPST() {
+  echo "Setting to PST timezone."
+  sudo systemsetup -settimezone America/Los_Angeles
+}

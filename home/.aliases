@@ -174,3 +174,6 @@ alias flow='./node_modules/flow-bin/vendor/flow'
 
 # Catch my attention
 alias y='say "yo"'
+
+# Directory size
+alias dirsize='du -sch ./*'
