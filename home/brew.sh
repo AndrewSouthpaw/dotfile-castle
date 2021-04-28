@@ -51,7 +51,10 @@ brew install screen
 
 # other tools
 brew install nvm
-brew install yarn
+# Yarn cannot be installed via brew without node, which causes problems with nvm.
+# Related: https://github.com/yarnpkg/website/issues/913. Install via curl instead.
+curl -o- -L https://yarnpkg.com/install.sh | bash
+
 brew install graphviz
 brew install tree
 brew install imagemagick
