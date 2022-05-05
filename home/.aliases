@@ -177,3 +177,6 @@ alias y='say "yo"'
 
 # Directory size
 alias dirsize='du -sch ./*'
+
+# gh pr checkout
+alias gpc='gh pr checkout'

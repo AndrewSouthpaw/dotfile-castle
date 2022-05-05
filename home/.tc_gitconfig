@@ -1,7 +1,8 @@
 [alias]
-
-  # View abbreviated SHA, description, and history graph of the latest 20 commits
-  l = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  # https://stackoverflow.com/questions/5316802/does-git-log-branches-work
+  l = log --graph --decorate  --pretty=oneline --abbrev-commit --branches=[s]taging --branches=[r]elease/* --branches=[m]ain --branches=andrew  --decorate-refs-exclude 'refs/tags/*'
+  la = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  lat = log --graph --decorate --decorate-refs-exclude 'refs/tags/*' --pretty=oneline --abbrev-commit --all
 
   # Expanded form of git history, displaying more information (date, etc.)
   hist = log --pretty=format:'%C(yellow)%h%Creset %Cgreen%ad%Creset | %s%C(magenta)%d%Creset [%Cblue%an%Creset]' --graph --date=short --decorate
@@ -21,19 +22,22 @@
   a = add
   cp = cherry-pick
   pu = push
+  puf = push --force-with-lease
   puo = push origin
   puon = push origin --no-verify
   puonf = push origin --no-verify --force-with-lease
   pl = pull
   plo = pull origin
-  plm = !"git checkout master && git pull origin master"
+  pls = !"git checkout staging && git pull"
+  plm = !"git checkout main && git pull origin main"
   plr = pull origin --rebase
   rb = rebase --committer-date-is-author-date
   rbo = rebase --committer-date-is-author-date --onto
   rbc = rebase --continue
 
   # Clear unstaged changes
-  cl = checkout -- .
+  cl = restore .
+  clf = restore --staged . && restore .
 
   # Reset to the previous commit
   res = reset HEAD^

@@ -32,10 +32,18 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
+# Set up git completion. The old script (below, commented out) stopped working 2021-11-02 for some unclear reason,
+# maybe due to upgrading git or some transitive dependency or something. Anyway, _git is no longer an exported
+# git wrapper, earlier commits in git repo (like 8b79343fc0) have it but at some point it was dropped.
+# This gist (https://gist.github.com/JuggoPop/10706934) pointed to a couple functions I could set up instead.
+# There's also this SO answer https://superuser.com/a/437508 about alias completion.
+__git_complete g __git_main
+
 # Enable tab completion for `g` by marking it as an alias for `git`
-if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-	complete -o default -o nospace -F _git g;
-fi;
+# if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+#   echo "hello completion"
+# 	complete -o default -o nospace -F _git g;
+# fi;
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
@@ -53,3 +61,55 @@ complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-
 # Enable homeshick `cd` command
 export HOMESHICK_DIR=/usr/local/opt/homeshick
 source "/usr/local/opt/homeshick/homeshick.sh"
+
+# # enable nvm auto-switching node
+# find-up () {
+#     path=$(pwd)
+#     while [[ "$path" != "" && ! -e "$path/$1" ]]; do
+#         path=${path%/*}
+#     done
+#     echo "$path"
+# }
+# cdnvm(){
+#     cd "$@";
+#     nvm_path=$(find-up .nvmrc | tr -d '[:space:]')
+
+#     # If there are no .nvmrc file, use the default nvm version
+#     if [[ ! $nvm_path = *[^[:space:]]* ]]; then
+
+#         declare default_version;
+#         default_version=$(nvm version default);
+
+#         # If there is no default version, set it to `node`
+#         # This will use the latest version on your machine
+#         if [[ $default_version == "N/A" ]]; then
+#             nvm alias default node;
+#             default_version=$(nvm version default);
+#         fi
+
+#         # If the current version is not the default version, set it to use the default version
+#         if [[ $(nvm current) != "$default_version" ]]; then
+#             nvm use default;
+#         fi
+
+#         elif [[ -s $nvm_path/.nvmrc && -r $nvm_path/.nvmrc ]]; then
+#         declare nvm_version
+#         nvm_version=$(<"$nvm_path"/.nvmrc)
+
+#         declare locally_resolved_nvm_version
+#         # `nvm ls` will check all locally-available versions
+#         # If there are multiple matching versions, take the latest one
+#         # Remove the `->` and `*` characters and spaces
+#         # `locally_resolved_nvm_version` will be `N/A` if no local versions are found
+#         locally_resolved_nvm_version=$(nvm ls --no-colors "$nvm_version" | tail -1 | tr -d '\->*' | tr -d '[:space:]')
+
+#         # If it is not already installed, install it
+#         # `nvm install` will implicitly use the newly-installed version
+#         if [[ "$locally_resolved_nvm_version" == "N/A" ]]; then
+#             nvm install "$nvm_version";
+#         elif [[ $(nvm current) != "$locally_resolved_nvm_version" ]]; then
+#             nvm use "$nvm_version";
+#         fi
+#     fi
+# }
+# alias cd='cdnvm'

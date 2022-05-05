@@ -266,9 +266,9 @@ function kill_gitx(){
   kill $(ps -ax | grep GitX.app | grep -v grep | head -1 | cut -d ' ' -f1) > /dev/null 2> /dev/null
 }
 
-# Rebase a current branch off the latest master
+# Rebase a current branch off the latest staging
 function branchupdate() {
-  git checkout master; git pull; git checkout -; git rebase master --committer-date-is-author-date;
+  git checkout staging; git pull; git checkout -; git rebase staging --committer-date-is-author-date;
 }
 
 # sets to GMT timezone
