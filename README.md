@@ -1,4 +1,4 @@
-# TC Castle
+# dotfiles castle
 
 ## Usage
 
@@ -8,12 +8,12 @@ Make sure you have `homeshick` installed:
 $ brew install homeshick
 ```
 
-Pull down the TC castle, which contains a bunch of dotfiles that might be useful. It will create symlinks in your `$HOME` directory to this cloned repo. If names collide, you can choose to skip them or have your original files overridden.
+Pull down the castle, which contains a bunch of dotfiles that might be useful. It will create symlinks in your `$HOME` directory to this cloned repo. If names collide, you can choose to skip them or have your original files overridden.
 
 If there's collisions that are irresolvable, we can rename the dotfiles in the TC castle to provide more extensibility.
 
 ```bash
-homeshick clone transparentclassroom/tc-castle
+homeshick clone andrewsouthpaw/dot-castle
 ```
 
 You'll need to source the "root" of these dotfiles in your `.bash_profile`:
