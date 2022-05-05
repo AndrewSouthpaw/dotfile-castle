@@ -10,7 +10,7 @@ $ brew install homeshick
 
 Pull down the castle, which contains a bunch of dotfiles that might be useful. It will create symlinks in your `$HOME` directory to this cloned repo. If names collide, you can choose to skip them or have your original files overridden.
 
-If there's collisions that are irresolvable, we can rename the dotfiles in the TC castle to provide more extensibility.
+If there's collisions that are irresolvable, you can rename the dotfiles in the castle to provide more extensibility.
 
 ```bash
 homeshick clone andrewsouthpaw/dot-castle
