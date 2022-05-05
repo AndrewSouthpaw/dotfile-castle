@@ -25,18 +25,19 @@ brew install findutils
 brew install gnu-sed
 
 # Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
 brew install bash
 brew install bash-completion2
+echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells
+chsh -s $(brew --prefix)/bash
 
 # homeshick for managing dotfiles
 brew install homeshick
 
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/bash;
+# Note: this adds the bash executable (/opt/homebrew/bin/bash) to the shells
+# and starts using it as the default shell.
+if ! fgrep -q '$(brew --prefix)/bin/bash' /etc/shells; then
+  echo '$(brew --prefix)/bin/bash' | sudo tee -a /etc/shells;
+  chsh -s $(brew --prefix)/bin/bash;
 fi;
 
 # Install `wget` with IRI support.
@@ -50,7 +51,11 @@ brew install screen
 #brew install homebrew/php/php56 --with-gmp
 
 # other tools
+# nvm doesn't want to be installed from nvm apparently, but whatever
+# you can use the curl command below instead.
 brew install nvm
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
 # Yarn cannot be installed via brew without node, which causes problems with nvm.
 # Related: https://github.com/yarnpkg/website/issues/913. Install via curl instead.
 curl -o- -L https://yarnpkg.com/install.sh | bash
@@ -122,6 +127,42 @@ brew install icu4c
 #brew install vbindiff
 #brew install webkit2png
 #brew install zopfli
+
+# Other stuff I typically use
+brew install act 
+brew install asciinema
+brew install awscli
+brew install azure-cli
+# brew install cockroach <- figure this out
+brew install cocoapods
+# brew install doppler <- figure this out
+brew install ffmpeg
+brew install fzf
+brew install gh
+brew install glow
+brew install graphite2
+brew install graphviz
+brew install heroku
+brew install homeshick
+brew install node
+brew install nvm
+brew install postgresql
+brew install protobuf
+brew install ripgrep
+brew install speedtest-cli
+brew install watch
+brew install youtube-dl
+
+# zoom light indicator: https://github.com/tonsky/AnyBar
+brew install --cask anybar
+# blackhole recorder for OBS to pick up computer audio
+brew install --cask blackhole-2ch
+# show keystrokes for demo purposes
+brew install --cask keycastr
+# for exposing localhost
+brew install --cask ngrok
+# java install
+brew install --cask temurin
 
 # Remove outdated versions from the cellar.
 brew cleanup
