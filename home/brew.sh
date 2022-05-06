@@ -141,7 +141,6 @@ brew install ffmpeg
 brew install fzf
 brew install gh
 brew install glow
-brew install graphite2
 brew install graphviz
 brew install heroku
 brew install homeshick
@@ -152,6 +151,7 @@ brew install protobuf
 brew install ripgrep
 brew install speedtest-cli
 brew install watch
+brew install withgraphite/tap/graphite
 brew install youtube-dl
 
 # zoom light indicator: https://github.com/tonsky/AnyBar
