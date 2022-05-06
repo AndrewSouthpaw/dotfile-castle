@@ -39,3 +39,102 @@ $ ~/brew.sh
 ```
 
 More details about commands for homeshick [here](https://github.com/andsens/homeshick/wiki/Commands).
+
+## Other stuff to do first
+
+- Install Xcode
+
+```
+Warning: A newer Command Line Tools release is available.
+Update them from Software Update in System Preferences or run:
+  softwareupdate --all --install --force
+
+If that doesn't show you any updates, run:
+  sudo rm -rf /Library/Developer/CommandLineTools
+  sudo xcode-select --install
+  ```
+
+- Install command line tools: `softwareupdate --all --install --force`
+- Accept the license: `sudo xcodebuild -license accept`
+
+[ ] fix shell
+[ ] remove yarn from `.bashrc`
+
+adding brew:
+
+```
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+yarn:
+
+```
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+```
+
+alternative path for nvm when installed directly:
+
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+```
+
+changing shell
+
+```
+chsh: WARNING: shell '/usr/local/bin/bash' does not exist
+```
+
+Caveats from nvm:
+
+```
+Please note that upstream has asked us to make explicit managing
+nvm via Homebrew is unsupported by them and you should check any
+problems against the standard nvm install method prior to reporting.
+
+You should create NVM's working directory if it doesn't exist:
+
+  mkdir ~/.nvm
+
+Add the following to ~/.profile or your desired shell
+configuration file:
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+You can set $NVM_DIR to any location, but leaving it unchanged from
+/opt/homebrew/opt/nvm will destroy any nvm-installed Node installations
+upon upgrade/reinstall.
+
+Type `nvm help` for further information.
+```
+
+Caveats from heroku:
+
+```
+To use the Heroku CLI's autocomplete --
+  Via homebrew's shell completion:
+    1) Follow homebrew's install instructions https://docs.brew.sh/Shell-Completion
+        NOTE: For zsh, as the instructions mention, be sure compinit is autoloaded
+              and called, either explicitly or via a framework like oh-my-zsh.
+    2) Then run
+      $ heroku autocomplete --refresh-cache
+  OR
+  Use our standalone setup:
+    1) Run and follow the install steps:
+      $ heroku autocomplete
+
+Bash completion has been installed to:
+  /opt/homebrew/etc/bash_completion.d
+```
+
+Caveats from fzf:
+
+```
+  /opt/homebrew/opt/fzf/install
+```
+
+
