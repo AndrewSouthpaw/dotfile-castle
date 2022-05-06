@@ -4,16 +4,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # add postgresql 10, needed because it's not a standard install
-PATH="/usr/local/opt/postgresql@10/bin:$PATH"
+PATH="$(brew --prefix)/opt/postgresql@10/bin:$PATH"
 
 # Add RVM to PATH for scripting
 PATH="$PATH:$HOME/.rvm/bin"
 
 # Add Python
-PATH=/usr/local/share/python:~/Library/Python/3.9/bin:~/Library/Python/2.7/bin:/usr/local/sbin:$PATH
+PATH=$(brew --prefix)/share/python:~/Library/Python/3.9/bin:~/Library/Python/2.7/bin:$(brew --prefix)/sbin:$PATH
 
 # Use OpenSSL instead of Apple proprietary SSL
-PATH=/usr/local/opt/openssl/bin:$PATH
+PATH=$(brew --prefix)/opt/openssl/bin:$PATH
 
 # Add `~/bin` to the `$PATH`
 PATH="$HOME/bin:$PATH";

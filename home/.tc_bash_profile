@@ -40,7 +40,7 @@ fi;
 __git_complete g __git_main
 
 # Enable tab completion for `g` by marking it as an alias for `git`
-# if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+# if type _git &> /dev/null && [ -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash ]; then
 #   echo "hello completion"
 # 	complete -o default -o nospace -F _git g;
 # fi;
@@ -59,8 +59,8 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
 
 # Enable homeshick `cd` command
-export HOMESHICK_DIR=/usr/local/opt/homeshick
-source "/usr/local/opt/homeshick/homeshick.sh"
+export HOMESHICK_DIR=$(brew --prefix)/opt/homeshick
+source "$(brew --prefix)/opt/homeshick/homeshick.sh"
 
 # # enable nvm auto-switching node
 # find-up () {
