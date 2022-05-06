@@ -1,0 +1,92 @@
+drwxrwxr-x  92 root    admin   2.9K May  5 16:41 ./
+drwxr-xr-x  20 root    wheel   640B Feb  6 13:22 ../
+-rw-r--r--@  1 andrew  admin    32K Apr  8 13:36 .DS_Store
+-rw-r--r--   1 root    wheel     0B Feb  6 13:22 .localized
+drwxr-xr-x@  3 andrew  staff    96B Jul 29  2020 Advantage2 SmartSet App for Mac v1.2.3d.app/
+drwxr-xr-x   3 andrew  staff    96B Dec 17  2019 Alfred 3.app/
+drwxr-xr-x   3 andrew  staff    96B Apr 25 07:08 Alfred 4.app/
+drwxrwxr-x@  3 andrew  admin    96B Dec  6  2020 Android Studio.app/
+drwxr-xr-x@  3 andrew  admin    96B Feb 18  2021 AnyBar.app/
+drwxr-xr-x   3 andrew  staff    96B Feb 16 07:21 AppCleaner.app/
+drwxr-xr-x   3 andrew  staff    96B Jan 18  2021 BetterTouchTool.app/
+drwxr-xr-x   3 root    wheel    96B Nov 30  2020 Blackmagic Disk Speed Test.app/
+drwxr-xr-x@  3 andrew  staff    96B Jul 13  2012 Boxer.app/
+drwxr-xr-x   3 root    wheel    96B May  1  2021 CCMenu.app/
+drwxrwxr-x   3 andrew  admin    96B May 17  2020 Cisco Webex Meetings.app/
+drwxr-xr-x   3 andrew  staff    96B Mar 18 16:08 Dash.app/
+drwxr-xr-x   3 andrew  admin    96B Mar 24 12:27 Docker.app/
+drwxr-xr-x   3 andrew  admin    96B Apr 27 15:31 Dropbox.app/
+drwxrwxr-x   5 root    wheel   160B Jan 23 12:13 Epson Software/
+drwxr-xr-x   3 andrew  staff    96B Apr 25 20:41 Evernote.app/
+drwxrwxr-x@  3 andrew  admin    96B May  5 14:57 Firefox.app/
+drwxr-xr-x   3 andrew  staff    96B Feb 24  2021 Flux.app/
+drwxr-xr-x   3 andrew  admin    96B Mar 30 09:41 Fork.app/
+drwxr-xr-x@  3 root    wheel    96B Mar 20 17:59 GarageBand.app/
+drwxr-xr-x   3 andrew  staff    96B Mar 25 02:01 Gather.app/
+drwxr-xr-x   3 andrew  staff    96B Oct  6  2021 GitHub Desktop.app/
+drwxr-xr-x@  3 andrew  admin    96B Nov 10  2014 GitX.app/
+drwxrwxr-x@  3 andrew  admin    96B Apr 29 22:27 Google Chrome.app/
+drwxr-xr-x   3 root    wheel    96B Apr 21 12:09 Google Docs.app/
+drwxr-xr-x   3 root    wheel    96B Apr 21 12:09 Google Drive.app/
+drwxr-xr-x   3 root    wheel    96B Apr 21 12:09 Google Sheets.app/
+drwxr-xr-x   3 root    wheel    96B Apr 21 12:09 Google Slides.app/
+drwxr-xr-x@  3 root    wheel    96B Apr 12 16:40 Hour.app/
+drwxr-xr-x   3 root    wheel    96B Sep  9  2020 Jabra Direct.app/
+drwxr-xr-x   3 root    wheel    96B Apr 28 09:10 Jabra Firmware Update.app/
+drwxr-xr-x   3 root    wheel    96B Oct  9  2020 JabraSDKV2/
+drwxr-xr-x@  3 andrew  admin    96B Sep  4  2016 KeePassX.app/
+drwxr-xr-x@  3 andrew  admin    96B Feb 21 17:14 KeyCastr.app/
+drwxr-xr-x@  3 andrew  staff    96B Feb 21  2018 KeyboardCleanTool.app/
+drwxr-xr-x@  3 root    wheel    96B Apr 12 14:26 Keynote.app/
+drwxr-xr-x@  3 andrew  admin    96B Feb 17  2021 LICEcap.app/
+drwxr-xr-x   3 root    admin    96B Jan 13 16:23 LetsView.app/
+drwxr-xr-x   3 andrew  staff    96B Apr 26 19:27 Linear.app/
+drwxr-xr-x   3 andrew  admin    96B May  5 16:41 Microsoft Edge.app/
+drwxrwxr-x   3 root    wheel    96B Apr 14 08:02 Microsoft Excel.app/
+drwxrwxr-x   3 root    wheel    96B Apr 14 08:08 Microsoft OneNote.app/
+drwxrwxr-x   3 root    wheel    96B Apr 14 08:03 Microsoft Outlook.app/
+drwxrwxr-x   3 root    wheel    96B Apr 14 08:05 Microsoft PowerPoint.app/
+drwxr-xr-x@  3 root    wheel    96B Feb  8 12:04 Microsoft Remote Desktop.app/
+drwxr-xr-x   3 root    wheel    96B May  2 09:04 Microsoft Teams.app/
+drwxrwxr-x   3 root    wheel    96B Apr 14 08:06 Microsoft Word.app/
+drwxr-xr-x@  3 andrew  admin    96B Mar 18  2021 Minecraft.app/
+drwxr-xr-x   3 andrew  admin    96B Dec 15 23:46 Moom.app/
+drwxr-xr-x   3 root    wheel    96B Dec 17 08:52 NordVPN IKE.app/
+drwxr-xr-x   3 andrew  staff    96B Feb 15 08:36 Notion.app/
+drwxr-xr-x@  3 root    wheel    96B Apr 12 16:40 Numbers.app/
+drwxr-xr-x@  3 andrew  admin    96B Oct  4  2021 OBS.app/
+drwxr-xr-x@  3 andrew  admin    96B Jul 23  2018 OmniFocus.app/
+drwxr-xr-x   3 root    wheel    96B Apr  5 17:51 OneDrive.app/
+drwxr-xr-x@  3 andrew  staff    96B Dec  3  2018 OpenEmu.app/
+drwxr-xr-x@  3 root    wheel    96B Apr 12 16:35 Pages.app/
+drwxr-xr-x   3 andrew  staff    96B Mar 17 15:23 Postman.app/
+drwxr-xr-x   3 andrew  admin    96B Dec 21  2019 Quicken 2017.app/
+drwxr-xr-x   3 andrew  staff    96B Jan 24 10:12 Quicken Utility.app/
+drwxr-xr-x   3 andrew  staff    96B Apr 30 14:56 Quicken.app/
+drwxr-xr-x@  3 andrew  admin    96B Aug  9  2021 RubyMine.app/
+drwxr-xr-x   3 andrew  staff    96B Apr  5 10:14 RunJS.app/
+drwxr-xr-x@  3 root    wheel    96B Feb  6 13:22 Safari.app/
+drwxr-xr-x@  3 root    wheel    96B Mar  9 23:05 Skitch.app/
+drwxr-xr-x   3 andrew  staff    96B Apr 20  2021 Skype.app/
+drwxr-xr-x   3 andrew  staff    96B May  3 09:15 Slack.app/
+drwxr-xr-x   3 andrew  staff    96B Mar 11 09:39 Spotify.app/
+drwxr-xr-x   3 andrew  admin    96B Feb 26  2021 Steam.app/
+drwxr-xr-x@  3 root    wheel    96B Feb 15 11:47 Todoist.app/
+drwxr-xr-x   3 andrew  admin    96B Jan 22  2021 TogglDesktop.app/
+drwxr-xr-x   3 andrew  staff    96B Apr 14 19:19 Tuple.app/
+drwxr-xr-x   3 root    wheel    96B Feb  6 13:22 Utilities/
+drwxr-xr-x   3 andrew  admin    96B Oct 29  2019 VLC.app/
+drwxr-xr-x@  3 andrew  staff    96B Nov 23 23:15 VMware Horizon Client.app/
+drwxr-xr-x@  3 andrew  admin    96B Apr  7  2021 VNC Viewer.app/
+drwxr-xr-x   3 root    admin    96B Sep 16  2019 VirtualBox.app/
+-rwxr-xr-x@  1 andrew  admin    13K Sep  3  2019 VirtualBox_Uninstall.tool*
+drwxr-xr-x   3 andrew  staff    96B Mar 27 05:18 Visual Studio Code.app/
+drwxr-xr-x@  3 andrew  admin    96B Nov 13 19:51 WebStorm 2021.3 EAP.app/
+drwxr-xr-x@  3 andrew  admin    96B Apr 13 18:15 WebStorm.app/
+drwxr-xr-x@  3 root    wheel    96B Apr 12 16:27 Xcode.app/
+drwxr-xr-x@  3 root    wheel    96B Apr 12 16:40 djay Pro AI.app/
+drwxr-xr-x@  3 andrew  staff    96B Sep  3  2014 djay.app/
+drwxr-xr-x@  3 root    wheel    96B Apr 12 14:28 iMovie.app/
+drwxr-xr-x   3 andrew  staff    96B Feb 16 20:01 iTerm.app/
+drwxrwxrwx   3 root    admin    96B Apr 15 11:12 lghub.app/
+drwxr-xr-x   3 andrew  wheel    96B May  3 09:02 zoom.us.app/
