@@ -136,6 +136,7 @@ brew install azure-cli
 # brew install cockroach <- figure this out
 brew install cocoapods
 # brew install doppler <- figure this out
+brew install fd # for fzf directory searching
 brew install ffmpeg
 brew install fzf
 brew install gh

@@ -17,11 +17,17 @@ alias gbd='git bd $(_gb)'
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_OPTS="--extended"
-export FZF_DEFAULT_COMMAND="fd --type f"
+# export FZF_DEFAULT_COMMAND="fd --type f" # original
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# this is triggered with Alt-C command, searches only within gather-town
+export FZF_ALT_C_COMMAND="fd -t d --hidden --follow --exclude '.git' . $HOME/Projects/gather-town"
+
 # Use fd to generate the list for directory completion
+# this is triggered with the **<tab> command
 _fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
+  fd --type d --hidden --follow .
+  # fd --type d --hidden --follow --exclude ".git" . "$1" # original
 }
 
 # GIT heart FZF

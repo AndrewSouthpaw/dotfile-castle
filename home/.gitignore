@@ -1,3 +1,17 @@
+# stuff to ignore for fzf. This file will only be used if there's a .git folder next to it.
+# There's a separate script that injects the .git folder into the home directory.
+Library
+.cache
+.cargo
+.ern
+.gradle
+.local
+.nvm
+.npm
+.node-gyp
+.rvm
+node_modules
+
 # Compiled Python files
 *.pyc
 

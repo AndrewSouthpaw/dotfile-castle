@@ -11,3 +11,7 @@ fi
 # Key bindings
 # ------------
 source "$(brew --prefix)/opt/fzf/shell/key-bindings.bash"
+
+# fzf needs a .git folder at the root to make use of the .gitignore file there for
+# ignoring files.
+[ ! -s $HOME/.git ] && mkdir $HOME/.git
