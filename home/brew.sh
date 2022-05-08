@@ -165,5 +165,8 @@ brew install --cask ngrok
 # java install
 brew install --cask temurin
 
+# brew always installs node, which is annoying.
+brew uninstall node
+
 # Remove outdated versions from the cellar.
 brew cleanup
