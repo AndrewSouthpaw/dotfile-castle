@@ -1,4 +1,5 @@
 alias gbs='npm run bootstrap'
+alias gtc='cd ~/Projects/gather-town/'
 
 # kill stubborn node process
 alias killnode='pkill -f "tsc-watch -b --onSuccess npm run server"'
