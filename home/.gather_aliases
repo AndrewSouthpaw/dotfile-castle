@@ -1,5 +1,6 @@
 alias gbs='npm run bootstrap'
 alias gtc='cd ~/Projects/gather-town/'
+alias gta='gather test:run'
 
 # kill stubborn node process
 alias killnode='pkill -f "tsc-watch -b --onSuccess npm run server"'
@@ -9,3 +10,4 @@ alias gtsf='gt stack fix'
 alias gtrs='gt repo sync'
 alias gtss='gt stack submit'
 alias gtref='gtrs && gtsf && gtss'
+alias gtbc='gt branch checkout'

@@ -165,6 +165,11 @@ brew install --cask ngrok
 # java install
 brew install --cask temurin
 
+# gather-specific changes
+brew uninstall python3
+brew install pyenv
+pyenv install 3.8
+
 # brew always installs node, which is annoying.
 brew uninstall node
 
