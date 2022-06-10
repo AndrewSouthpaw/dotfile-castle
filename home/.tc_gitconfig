@@ -35,9 +35,16 @@
   rbo = rebase --committer-date-is-author-date --onto
   rbc = rebase --continue
 
+  currentbranch = symbolic-ref --short HEAD
+  # Delete a branch you're currently on
+  unc = "!f() { \
+    declare currentBranch=\"$(git symbolic-ref --short HEAD)\"; \
+    git clf && git checkout staging && git branch -D $currentBranch;\
+  }; f"
+
   # Clear unstaged changes
   cl = restore .
-  clf = restore --staged . && restore .
+  clf = !"git restore --staged . && git cl"
 
   # Reset to the previous commit
   res = reset HEAD^
