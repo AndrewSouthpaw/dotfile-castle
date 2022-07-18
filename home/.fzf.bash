@@ -1,3 +1,6 @@
+# How to fix Alt-C on macOS
+# https://github.com/junegunn/fzf/issues/164
+
 # Setup fzf
 # ---------
 if [[ ! "$PATH" == *$(brew --prefix)/opt/fzf/bin* ]]; then
