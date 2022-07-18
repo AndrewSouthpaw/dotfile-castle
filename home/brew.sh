@@ -166,6 +166,7 @@ brew install --cask ngrok
 brew install --cask temurin
 
 # gather-specific changes
+npm install -g @withgraphite/graphite-cli
 brew uninstall python3
 brew install pyenv
 pyenv install 3.8
