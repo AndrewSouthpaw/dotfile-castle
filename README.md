@@ -57,9 +57,6 @@ If that doesn't show you any updates, run:
 - Install command line tools: `softwareupdate --all --install --force`
 - Accept the license: `sudo xcodebuild -license accept`
 
-[ ] fix shell
-[ ] remove yarn from `.bashrc`
-
 adding brew:
 
 ```
@@ -81,11 +78,6 @@ export NVM_DIR="$HOME/.nvm"
 
 ```
 
-changing shell
-
-```
-chsh: WARNING: shell '/usr/local/bin/bash' does not exist
-```
 
 Caveats from nvm:
 

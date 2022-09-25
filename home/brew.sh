@@ -53,12 +53,12 @@ brew install screen
 # other tools
 # nvm doesn't want to be installed from nvm apparently, but whatever
 # you can use the curl command below instead.
-brew install nvm
+# brew install nvm
 # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 # Yarn cannot be installed via brew without node, which causes problems with nvm.
 # Related: https://github.com/yarnpkg/website/issues/913. Install via curl instead.
-curl -o- -L https://yarnpkg.com/install.sh | bash
+# curl -o- -L https://yarnpkg.com/install.sh | bash
 
 brew install graphviz
 brew install tree
