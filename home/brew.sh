@@ -27,8 +27,8 @@ brew install gnu-sed
 # Install Bash 4.
 brew install bash
 brew install bash-completion2
-echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells
-chsh -s $(brew --prefix)/bash
+# echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells
+# chsh -s $(brew --prefix)/bash
 
 # homeshick for managing dotfiles
 brew install homeshick
