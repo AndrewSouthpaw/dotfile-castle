@@ -28,6 +28,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # this is triggered with Alt-C command, searches only within gather-town
 export FZF_ALT_C_COMMAND="fd -t d --hidden --follow --exclude '.git' . $HOME/Projects/gather-town"
 
+# bind [up] to fzf search
+bind -x '"\e[A": __fzf_history__'
+
 # Use fd to generate the list for directory completion
 # this is triggered with the **<tab> command
 _fzf_compgen_dir() {
