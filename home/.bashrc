@@ -1,4 +1,4 @@
+# this doesn't load normally, and I'm not clear when it does, but in case this one is used,
+# just defer to the bash_profile.
+
 [ -n "$PS1" ] && source ~/.bash_profile;
-
-
-GATHER_AC_BASH_SETUP_PATH=/Users/andrew/Library/Caches/gather-cli/autocomplete/bash_setup && test -f $GATHER_AC_BASH_SETUP_PATH && source $GATHER_AC_BASH_SETUP_PATH; # gather autocomplete setup
