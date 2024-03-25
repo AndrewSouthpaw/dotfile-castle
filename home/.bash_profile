@@ -3,8 +3,23 @@
 # seems to not need to load homebrew explicitly for Intel, but copying here in case it would matter.
 # [ -s "/usr/local/homebrew/bin/brew" ] && eval "$(/usr/local/homebrew/bin/brew shellenv)"
 
-source ~/.tc_bash_profile
-source ~/.gather_bash_profile
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.{path,bash_prompt,exports,aliases,functions,tc_bash_profile,extra,creds}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.gather_{bash_profile,path,bash_prompt,exports,aliases,functions,extra}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
+# fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # heroku autocomplete setup
