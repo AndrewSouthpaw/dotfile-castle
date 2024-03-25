@@ -16,15 +16,36 @@ If there's collisions that are irresolvable, you can rename the dotfiles in the 
 homeshick clone andrewsouthpaw/dot-castle
 ```
 
-If you want to extend your `.gitconfig` with ours, just replace yours with:
+## Set up untracked files
+
+- `.gitconfig_user` -- your git user info
+- `.creds` -- your credentials to various services
+
+You can create these in the castle repo if you want (they're ignored), and symlink them:
+
+```
+$ ln -s ~/.homesick/repos/dotfile-castle/home/.gitconfig_user ~/.gitconfig_user
+$ ln -s ~/.homesick/repos/dotfile-castle/home/.creds ~/.creds
+```
+
+## Git
+
+The `.gitconfig_user` file should look something like the following, with your own info substituted:
+
+```
+[user]
+	name = OverwriteMe
+	email = notmy@email.com
+```
+
+If you want to extend your `.gitconfig` with ours, just add an `[include]` directive:
 
 ```
 [include]
-  path = ./.tc_gitconfig
-[user]
-  name = Your Name
-  email = your@email.com
+  path = ./.gitconfig_by_some_other_name
 ```
+
+## Brew
 
 Then, you can install a bunch of useful tooling with `brew.sh` that's now in your `$HOME` directory.
 
