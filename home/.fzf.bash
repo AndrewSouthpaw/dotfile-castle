@@ -40,6 +40,8 @@ _fzf_compgen_dir() {
   # fd --type d --hidden --follow --exclude ".git" . "$1" # original
 }
 
+# Bash bindings for .fzf.git
+# https://gist.github.com/junegunn/8b572b8d4b5eddd8b85e5f4d40f17236
 if [[ $- =~ i ]]; then
   bind '"\er": redraw-current-line'
   # these bind the various commands (like _gf, _gb, etc.) to keyboard shortcuts.

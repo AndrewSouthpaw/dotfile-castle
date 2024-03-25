@@ -1,37 +1,3 @@
-# Aliases specific to Transparent Classroom stuff
-
-# Expected to be run from root directory
-alias im='i18n-migrate'
-alias imref='make im_rollback && make im_migrate'
-alias imme='make im_migrate'
-alias imen='i18n-migrate migrate en'
-alias imenr='i18n-migrate rollback en'
-alias imr='make im_rollback'
-alias tcps='bin/pull_school -s'
-alias rs='rails server'
-alias rsip='make rails_ip'
-alias wp='make webpack_start'
-alias wpip='make webpack_start_ip'
-alias rdbm='bin/rdbm'
-alias rdbr='bin/rdbr'
-alias swu='bin/switch_pair_wip_up.sh'
-alias swd='bin/switch_pair_wip_down.sh'
-
-# check for whether modules are ES5-compatible
-alias es5='npx are-you-es5 check .'
-
-# testing
-alias yt='make test_js_watch'
-alias yta='make test_js'
-alias ytaa='make test_js_all'
-alias ytau='make test_js_update'
-alias lint='make fast_lint'
-
-# navigation
-alias tc='cd ~/Projects/TransparentClassroom'
-alias tcn='cd ~/Projects/TransparentClassroom/frontend/native'
-alias gtc='cd "/Volumes/GoogleDrive/Team Drives/Transparent Classroom"'
-
 # server
 alias findrails='lsof -n -i4TCP:3000'
 # kill everything rails related; useful when it becomes undead
