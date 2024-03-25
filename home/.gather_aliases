@@ -6,16 +6,18 @@ alias gta='gather test:run'
 alias killnode='pkill -f "tsc-watch -b --onSuccess npm run server"'
 alias killcache='rm -r ~/Library/Caches/JetBrains/WebStorm2022.1/caches/'
 
+# other PR stuff
+alias gmm='gather merge main --pr'
+
 # graphite shortcuts
-alias gg='gt b co'
-alias gtsr='gt stack restack'
-alias gtrs='gt repo sync'
-alias gtss='gt stack submit'
-alias gtref='gtrs -fr && gtss'
-alias gtbc='gt branch checkout'
-alias gtup='gtsr && gtss'
-alias gtbt='gt branch track'
-alias gtbta='gt downstack track'
+alias gg='gt co'
+alias gtr='gt restack'
+alias gts='gt sync --no-restack'
+alias gtss='gt submit --stack --reviewers'
+alias gtref='gts -f && gtr && gtss'
+alias gtbc='gt checkout'
+alias gtup='gtr && gtss'
+alias gtt='gt track'
 
 # add bash completion for gather cli to `ga` command
 alias ga='gather'

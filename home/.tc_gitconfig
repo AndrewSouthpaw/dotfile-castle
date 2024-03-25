@@ -9,6 +9,8 @@
 
   # View the current working tree status using the short format
   s = status -s
+  # Current commit title
+  ss = show -s --format=%s
 
   # Shortening basic commands
   co = checkout
@@ -28,8 +30,8 @@
   puonf = push origin --no-verify --force-with-lease
   pl = pull
   plo = pull origin
-  pls = !"git checkout staging && git pull"
-  plm = !"git checkout main && git pull origin main"
+  pls = !"git checkout staging && gather staging:pull"
+  plm = !"git checkout main && git pull --rebase origin main"
   plr = pull origin --rebase
   rb = rebase --committer-date-is-author-date
   rbo = rebase --committer-date-is-author-date --onto
@@ -39,7 +41,7 @@
   # Delete a branch you're currently on
   unc = "!f() { \
     declare currentBranch=\"$(git symbolic-ref --short HEAD)\"; \
-    git clf && git checkout staging && git branch -D $currentBranch;\
+    git clf && git checkout main && git branch -D $currentBranch;\
   }; f"
 
   # Clear unstaged changes
@@ -220,7 +222,7 @@
   # default = matching
   default = simple
   # Make `git push` push relevant annotated tags when pushing branches out.
-  followTags = true
+  followTags = false
 
 # URL shorthands
 
