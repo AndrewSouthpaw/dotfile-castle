@@ -1,4 +1,17 @@
+[user]
+	name = OverwriteMe
+	email = notmy@email.com
+# overwrite with your git user info
+[include]
+  path = ./.gitconfig_user
+[init]
+  defaultBranch = main
+[core]
+  editor = vim
+[pull]
+  ff = only
 [alias]
+  commitrand = "!myFn() { echo asdf$1 > $1.txt && git add . && git commit -m \"Add $1.txt.\"; }; myFn"
   # https://stackoverflow.com/questions/5316802/does-git-log-branches-work
   l = log --graph --decorate  --pretty=oneline --abbrev-commit --branches=[s]taging --branches=[r]elease/* --branches=[m]ain --branches=andrew  --decorate-refs-exclude 'refs/tags/*'
   la = log --graph --decorate --pretty=oneline --abbrev-commit --all
@@ -248,6 +261,3 @@
 [url "git://gist.github.com/"]
 
   insteadOf = "gist:"
-[user]
-	name = OverwriteMe
-	email = notmy@email.com

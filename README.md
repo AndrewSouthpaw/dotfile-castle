@@ -16,12 +16,6 @@ If there's collisions that are irresolvable, you can rename the dotfiles in the 
 homeshick clone andrewsouthpaw/dot-castle
 ```
 
-You'll need to source the "root" of these dotfiles in your `.bash_profile`:
-
-```bash
-source ~/.tc_bash_profile
-```
-
 If you want to extend your `.gitconfig` with ours, just replace yours with:
 
 ```
