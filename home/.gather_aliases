@@ -1,4 +1,4 @@
-alias gtc='cd ~/Projects/gather-town/'
+alias gtc='cd ~/Projects/gather-town-v2/'
 
 # kill stubborn node process
 alias killnode='pkill -f "tsc-watch -b --onSuccess npm run server"'
@@ -12,10 +12,15 @@ alias gg='gt co'
 alias gtr='gt restack'
 alias gts='gt sync --no-restack'
 alias gtss='gt submit --stack --reviewers'
-alias gtref='gts -f && gtr && gtss'
+alias gtref='gts && gtr'
 alias gtbc='gt checkout'
 alias gtup='gtr && gtss'
 alias gtt='gt track'
+alias gtf='git checkout - && git reset --hard HEAD^ && git checkout - && gt track'
 
 # add bash completion for gather cli to `ga` command
 complete -o default -F _gather_autocomplete ga
+
+# AWS infra stuff
+alias sso-platform='aws sso login --profile platform' # triggers credentials issuance using a browser SSO flow
+alias exp-platform='eval $(aws configure export-credentials --format env --profile platform)' # exports credentials to the existing session

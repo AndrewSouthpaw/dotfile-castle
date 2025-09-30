@@ -88,3 +88,6 @@ complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-
 # Enable homeshick `cd` command
 export HOMESHICK_DIR=$(brew --prefix)/opt/homeshick
 source "$(brew --prefix)/opt/homeshick/homeshick.sh"
+
+# uv
+export PATH="/Users/andrew/.local/bin:$PATH"

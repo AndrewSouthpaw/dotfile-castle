@@ -27,11 +27,16 @@ export FZF_DEFAULT_OPTS="--extended"
 # export FZF_DEFAULT_COMMAND="fd --type f" # original
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-# this is triggered with Alt-C command, searches only within gather-town
-export FZF_ALT_C_COMMAND="fd -t d --hidden --follow --exclude '.git' . $HOME/Projects/gather-town"
+# this is triggered with Alt-C command, searches only within gather-town-v2
+export FZF_ALT_C_COMMAND="fd -t d --hidden --follow --exclude '.git' . $HOME/Projects/gather-town-v2"
 
 # bind [up] to fzf search
-bind -x '"\e[A": __fzf_history__'
+# Wrap with a check for interactive TTY: https://superuser.com/a/1782317
+if [[ $- = *i* ]]
+then
+    bind -x '"\e[A": __fzf_history__'
+fi
+
 
 # Use fd to generate the list for directory completion
 # this is triggered with the **<tab> command
@@ -48,7 +53,7 @@ if [[ $- =~ i ]]; then
   # Look to the function definitions to figure out what each one does.
   # e.g. C-g\C-f means type Ctrl+G then Ctrl+F.
   bind '"\C-g\C-f": "$(_gf)\e\C-e\er"'
-  bind '"\C-g\C-b": "$(_gb)\e\C-e\er"'
+  bind '"\C-g\C-g": "$(_gb)\e\C-e\er"'
   bind '"\C-g\C-t": "$(_gt)\e\C-e\er"'
   bind '"\C-g\C-h": "$(_gh)\e\C-e\er"'
   bind '"\C-g\C-r": "$(_gr)\e\C-e\er"'
