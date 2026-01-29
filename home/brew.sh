@@ -27,10 +27,9 @@ brew install gnu-sed
 # Install Bash 4.
 brew install bash
 brew install bash-completion2
-# echo $(brew --prefix)/bin/bash | sudo tee -a /etc/shells
-# chsh -s $(brew --prefix)/bash
 
 # homeshick for managing dotfiles
+# presumably this is already installed, because this dotfile exists.
 brew install homeshick
 
 # Note: this adds the bash executable (/opt/homebrew/bin/bash) to the shells
@@ -48,30 +47,54 @@ brew install vim
 brew install grep
 brew install openssh
 brew install screen
-#brew install homebrew/php/php56 --with-gmp
+brew install tree
+brew install imagemagick
+brew install rename
+# skip watchman generally, it makes Jest grumpy
+# brew install watchman
+brew install act 
+brew install asciinema # for making recordings of terminal
+brew install awscli
 
-# other tools
-# nvm doesn't want to be installed from nvm apparently, but whatever
+# brew install cockroach <- figure this out
+# brew install cocoapods
+# brew install doppler <- figure this out
+brew install fd # for fzf directory searching
+brew install ffmpeg
+brew install fzf
+brew install gh
+brew install postgresql
+brew install ripgrep
+brew install speedtest-cli
+brew install watch
+brew install yt-dlp # invoke with quotes: yt-dlp '...'
+# blackhole recorder for OBS to pick up computer audio
+brew install --cask blackhole-2ch
+# show keystrokes for demo purposes
+brew install --cask keycastr
+# for exposing localhost
+brew install --cask ngrok
+
+# this stuff installs nvm, yarn, etc but gather handles this for us now.
+# nvm doesn't want to be installed from brew apparently, but whatever
 # you can use the curl command below instead.
-# brew install nvm
 # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 # Yarn cannot be installed via brew without node, which causes problems with nvm.
 # Related: https://github.com/yarnpkg/website/issues/913. Install via curl instead.
 # curl -o- -L https://yarnpkg.com/install.sh | bash
 
-brew install graphviz
-brew install tree
-brew install imagemagick
-brew install rename
-brew install speedtest_cli
-brew install awscli
-brew install heroku/brew/heroku
-brew install watchman
-brew install ripgrep
 
-# icu4c is used by charlock_holmes, a package used in TC
-brew install icu4c
+
+# stuff that is maybe useful, at some point?
+# render markdown nicely in CLI
+# brew install glow
+# brew install azure-cli
+# brew install heroku
+# generate ugly graphs programmatically
+# brew install graphviz
+# zoom light indicator: https://github.com/tonsky/AnyBar
+# brew install --cask anybar
 
 # Install font tools.
 #brew tap bramstein/webfonttools
@@ -128,48 +151,11 @@ brew install icu4c
 #brew install webkit2png
 #brew install zopfli
 
-# Other stuff I typically use
-brew install act 
-brew install asciinema
-brew install awscli
-brew install azure-cli
-# brew install cockroach <- figure this out
-brew install cocoapods
-# brew install doppler <- figure this out
-brew install fd # for fzf directory searching
-brew install ffmpeg
-brew install fzf
-brew install gh
-brew install glow
-brew install graphviz
-brew install heroku
-brew install homeshick
-brew install node
-brew install nvm
-brew install postgresql
-brew install protobuf
-brew install ripgrep
-brew install speedtest-cli
-brew install watch
-brew install withgraphite/tap/graphite
-brew install youtube-dl
-
-# zoom light indicator: https://github.com/tonsky/AnyBar
-brew install --cask anybar
-# blackhole recorder for OBS to pick up computer audio
-brew install --cask blackhole-2ch
-# show keystrokes for demo purposes
-brew install --cask keycastr
-# for exposing localhost
-brew install --cask ngrok
-# java install
-brew install --cask temurin
-
-# gather-specific changes
-npm install -g @withgraphite/graphite-cli
-brew uninstall python3
-brew install pyenv
-pyenv install 3.8
+# gather stuff no longer needed because they have a Brewfile
+# npm install -g @withgraphite/graphite-cli
+# brew uninstall python3
+# brew install pyenv
+# pyenv install 3.8
 
 # brew always installs node, which is annoying.
 brew uninstall node

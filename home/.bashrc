@@ -3,8 +3,6 @@
 
 [ -n "$PS1" ] && source ~/.bash_profile;
 
-eval "$(direnv hook bash)"
-# uv
 export PATH="/Users/andrew/.local/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
