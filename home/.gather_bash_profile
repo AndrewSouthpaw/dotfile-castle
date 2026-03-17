@@ -1,10 +1,10 @@
+eval "$(direnv hook bash)"
+eval "$(mise activate --shims bash)"
+
 # Load pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-# We no longer use direnv I think
-# eval "$(direnv hook bash)"
 
 # Graphite completion
 # ==============================
@@ -37,3 +37,14 @@ _gt_yargs_completions()
 }
 complete -o bashdefault -o default -F _gt_yargs_completions gt
 ###-end-gt-completions-###
+
+# from gather2-cli, doesn't work :-(
+GATHER2_AC_BASH_SETUP_PATH=/Users/andrew/Library/Caches/gather-cli/autocomplete/bash_setup && test -f $GATHER2_AC_BASH_SETUP_PATH && source $GATHER2_AC_BASH_SETUP_PATH; # gather2 autocomplete setup
+
+# Socket Firewall Aliases
+export SOCKET_API_KEY=sktsec_IHb0tH_7F-t6fz7HGmb3vlQQ8L1NNK64Zm4CyiAhY_w1_api
+export SFW_CONFIG_RELATIVE_PATHS=true
+# JavaScript/TypeScript
+alias npm="sfw npm"
+alias yarn="sfw yarn"
+alias pnpm="sfw pnpm"
