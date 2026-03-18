@@ -6,7 +6,9 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
-alias -- -="cd -"
+# Claude Code doesn't serialize this type of alias correctly: https://github.com/anthropics/claude-code/issues/16545
+# I don't use it anyway, so whatever just comment it out.
+# alias -- -="cd -"
 
 # Shortcuts
 alias dl="cd ~/Downloads"
