@@ -19,7 +19,7 @@ alias gtt='gt track'
 alias gtf='git checkout - && git reset --hard HEAD^ && git checkout - && gt track'
 
 # add bash completion for gather cli to `ga` command
-complete -o default -F _gather_autocomplete ga
+complete -o default -F _gather2_autocomplete ga
 
 # AWS infra stuff
 alias sso-platform='aws sso login --profile platform' # triggers credentials issuance using a browser SSO flow
