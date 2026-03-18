@@ -74,6 +74,8 @@ brew install --cask blackhole-2ch
 brew install --cask keycastr
 # for exposing localhost
 brew install --cask ngrok
+# for creating terminal notifications, e.g. for Claude: https://github.com/julienXX/terminal-notifier
+brew install terminal-notifier
 
 # this stuff installs nvm, yarn, etc but gather handles this for us now.
 # nvm doesn't want to be installed from brew apparently, but whatever
