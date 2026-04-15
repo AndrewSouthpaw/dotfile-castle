@@ -10,9 +10,6 @@ PATH="$(brew --prefix)/opt/postgresql@10/bin:$PATH"
 # Add RVM to PATH for scripting
 PATH="$PATH:$HOME/.rvm/bin"
 
-# Add Python
-PATH=$(brew --prefix)/share/python:~/Library/Python/3.9/bin:~/Library/Python/2.7/bin:$(brew --prefix)/sbin:$PATH
-
 # Use OpenSSL instead of Apple proprietary SSL
 PATH=$(brew --prefix)/opt/openssl/bin:$PATH
 
