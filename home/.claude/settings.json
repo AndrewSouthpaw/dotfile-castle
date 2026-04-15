@@ -22,5 +22,14 @@
         ]
       }
     ]
-  }
+  },
+  "extraKnownMarketplaces": {
+    "callstack-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "callstackincubator/agent-skills"
+      }
+    }
+  },
+  "skipDangerousModePermissionPrompt": true
 }
