@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Temporarily disabled — Superset manages its own notifications.
+# Remove the next line to re-enable.
+exit 0
 set -euo pipefail
 
 # ----- read payload from stdin, or env var, or arg -----
