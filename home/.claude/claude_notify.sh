@@ -15,7 +15,7 @@ if ! command -v jq >/dev/null 2>&1; then
   /opt/homebrew/bin/terminal-notifier \
     -title "Claude Code" \
     -message "Notification (jq not installed)" \
-    -sound default
+    -sound Submarine
   exit 0
 fi
 
@@ -60,7 +60,7 @@ severity="$(jq -r '.severity // .data.severity // "info"' <<<"$payload" | tr '[:
 case "$severity" in
   error|fatal) sound="Basso" ;;
   warning)    sound="Submarine" ;;
-  info|*)     sound="default" ;;
+  info|*)     sound="Submarine" ;;
 esac
 
 # Optional: open a URL if present
