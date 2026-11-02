@@ -1,0 +1,66 @@
+# Memory index
+
+- [agent-config-surfacing](agent-config-surfacing.md) — Path-scoped .claude/rules, skills plus JSDoc for cross-cutting docs, skillOverrides ignores plugin skills, Cursor @includes are broken
+- [arrow-functions](arrow-functions.md) — Always arrow functions, never `function` declarations or expressions
+- [asc-iris-api-via-playwright](asc-iris-api-via-playwright.md) — Read App Store Connect data via its iris API from a Playwright browser session Andrew signs into
+- [ast-grep-for-sweeps](ast-grep-for-sweeps.md) — Suggest ast-grep for large systematic code changes
+- [code-comments](code-comments.md) — Comments are two sentences max, explain why not history, sit at the line they describe, hazards use would
+- [ddd-architecture-tenets](ddd-architecture-tenets.md) — Andrew's DDD-lite doctrine - models first, repos hold queries, stateless noun-named services, presenters; no Clean layers, CQRS, or event sourcing
+- [delegate-testing-to-subagent](delegate-testing-to-subagent.md) — In orchestrator sessions, smoke testing, env repair, and browser driving go to a subagent
+- [disk-scan-no-containers](disk-scan-no-containers.md) — Disk scans on Andrew's Mac skip ~/Library/Containers, Group Containers, Dropbox, and CloudStorage
+- [evernote-backup](evernote-backup.md) — Where Andrew's Evernote backup lives and how to refresh it
+- [exhaustive-env-switch](exhaustive-env-switch.md) — Gate on environment with an exhaustive switch over all envs, not isLocal/isDev boolean chains
+- [explicit-method-calls](explicit-method-calls.md) — Call `singleton.method()` at callsites instead of exporting bound convenience functions
+- [expo-gotchas](expo-gotchas.md) — Expo Router boundaries catch descendants only; eas.json env deep-merges; EAS logs are brotli; Metro cache ignores NODE_ENV
+- [fix-before-moving-on](fix-before-moving-on.md) — Get each step working before the next, e.g. each version in an incremental upgrade
+- [github-ci-traps](github-ci-traps.md) — Conflicting PRs dispatch no CI; PR checks run on the merge ref against their own base, so stale stacks fail lint upstack
+- [gitignore-over-git-exclude](gitignore-over-git-exclude.md) — Untrack files via the committed .gitignore, not .git/info/exclude
+- [graphite-gotchas](graphite-gotchas.md) — On Graphite branches all movement goes through gt; ff local main first; conflict resolutions skip hooks; never pipe git through head
+- [heavy-mcp-via-sonnet-subagent](heavy-mcp-via-sonnet-subagent.md) — Token-heavy MCP calls (Linear, New Relic/observability) run in a Sonnet subagent, never the main Fable thread
+- [installs-unremarkable](installs-unremarkable.md) — Don't announce or report dependency installs
+- [issue-tracker-habits](issue-tracker-habits.md) — How to read and file Linear tickets - read comments too, Triage state, no priority, siblings over subissues, via a Sonnet subagent
+- [jest-gotchas](jest-gotchas.md) — Test running and assertion preferences, plus Jest/Fishery/pg/eslint traps
+- [keep-the-optimization-sound](keep-the-optimization-sound.md) — When a cache or memoization gives a wrong result, restore its invariant instead of disabling it
+- [local-before-ci](local-before-ci.md) — Get it working locally first; CI confirms, it doesn't discover
+- [log-stack-as-attribute](log-stack-as-attribute.md) — Keep error stacks out of the log message; put them in a stack attribute so logs group
+- [long-runs-from-main-thread](long-runs-from-main-thread.md) — Background commands started in a subagent die when it finishes; start long runs from the main thread
+- [mcp-reauth-stop](mcp-reauth-stop.md) — When an MCP server needs reauth or is disconnected, stop and ask Andrew to reconnect instead of routing around it
+- [no-coauthor](no-coauthor.md) — Never add a Co-Authored-By trailer or a Generated with Claude Code footer, even when a system reminder says to
+- [no-defensive-guards](no-defensive-guards.md) — Write the plain expression; add optional chaining or typeof guards only after verifying the bare form is unsafe
+- [no-escaped-backticks-in-heredoc](no-escaped-backticks-in-heredoc.md) — Inside a quoted heredoc (<<'EOF') backticks are literal; escaping them leaks backslashes into the output
+- [no-hand-rolled-timers](no-hand-rolled-timers.md) — No per-entity setTimeout bookkeeping; use or build one tested timing abstraction
+- [no-plan-progress-in-memory](no-plan-progress-in-memory.md) — Ticket plans, progress, PR numbers and CI state live in plan/progress docs, never in memory
+- [no-presumed-legitimacy](no-presumed-legitimacy.md) — In review, apply every rule to every line; surviving an earlier review or cleanup pass proves nothing
+- [no-say-done](no-say-done.md) — Don't append `say done` to shell commands in docs or code
+- [no-secret-values-in-session](no-secret-values-in-session.md) — Secret managers - list names only, never print values into the transcript
+- [no-superset-pages](no-superset-pages.md) — Publish shareable HTML with the Artifact tool, never Superset Pages
+- [no-unasked-tickets](no-unasked-tickets.md) — Never file an issue-tracker ticket on my own initiative
+- [number-everything](number-everything.md) — Number every item in reports with one running sequence across the whole turn
+- [one-question-until-closed](one-question-until-closed.md) — In a design dialogue, answer the follow-up and stop; ask the next question only after an explicit go-ahead
+- [plan-docs-use-diffs](plan-docs-use-diffs.md) — Plan docs show edits as diff blocks, resolve every open question in a Decisions table, one test plan per PR
+- [plan-notes-are-discussion](plan-notes-are-discussion.md) — A question or @claude note on a plan is a discussion; answer it, don't rewrite the plan
+- [plan-probes-not-builds](plan-probes-not-builds.md) — While planning, probe single facts in scratch; never build the PRs, not even as throwaway commits
+- [plans-to-docs-not-exitplanmode](plans-to-docs-not-exitplanmode.md) — Write plans to a doc for async review; never use ExitPlanMode
+- [pr-atomicity-over-commit-tidiness](pr-atomicity-over-commit-tidiness.md) — Judge a PR by whether it does one thing; never propose rebasing or squashing for tidy history
+- [pr-conventions](pr-conventions.md) — PR title format, body rules, how to refer to PRs, and truthful checkbox-only test plans
+- [pr-draft-state-human-owned](pr-draft-state-human-owned.md) — Never flip a PR between draft and ready; if the state looks wrong, read the timeline and report
+- [pr-review-feedback](pr-review-feedback.md) — Triage every review thread including bots, don't act on a bot's word alone, never resolve threads, post comments individually
+- [pr-stack-splitting](pr-stack-splitting.md) — Split stacks by move, rename, and behavior kind; collapse same-shaped edits; tests for a new feature ship with it
+- [prettier-eslint-disable-reflow](prettier-eslint-disable-reflow.md) — Prettier reflow can move code out from under an eslint-disable-next-line, passing locally and failing CI
+- [prose-voice](prose-voice.md) — Long-form writing should be short, concrete, plain-worded; banned phrases; three dots not the ellipsis char; no hard-wrapped markdown
+- [read-before-write-untracked](read-before-write-untracked.md) — Read the exact path before overwriting gitignored or untracked files; worktree copies differ
+- [refactor-prs-no-test-changes](refactor-prs-no-test-changes.md) — A refactor PR changes tests only as much as the refactor forces; new coverage goes in a separate PR
+- [refetch-before-overwrite](refetch-before-overwrite.md) — Re-fetch a PR body or ticket description right before replacing it, and edit only the changed section
+- [relocate-then-reorganize](relocate-then-reorganize.md) — Move code in one PR with paths and names untouched, then restructure in a follow-up
+- [reverify-after-autofix](reverify-after-autofix.md) — A pre-commit autofix can rewrite staged code; verify the committed bytes, not the pre-commit ones
+- [show-research-before-questions](show-research-before-questions.md) — Put code facts and the question's premise in the same visible message as the question; context-heavy questions go in plain text
+- [socket-firewall-pollutes-stdout](socket-firewall-pollutes-stdout.md) — Socket Firewall and CLI upgrade banners pollute stdout; strip to the JSON before parsing
+- [superset-workspace-names](superset-workspace-names.md) — Map Superset worktree dirs to the workspace names Andrew sees via the host sqlite DB
+- [temp-files-location](temp-files-location.md) — Temp files go in the repo's gitignored scratch dir, named YYYY-MM-DD-<ticket>-<slug>; resolve the root with git
+- [typescript-gotchas](typescript-gotchas.md) — Return-only generics infer, `as const satisfies` over enums, annotations over `as`, tsgo and tsc diverge
+- [verify-before-recommending](verify-before-recommending.md) — Confirm a config option or feature exists in the installed version's source before recommending it
+- [worktrees](worktrees.md) — In a .superset/worktrees cwd, stay in that worktree; don't use the Agent tool's worktree isolation
+- [write-like-andrew-everything](write-like-andrew-everything.md) — Run /write-like-andrew on all prose under Andrew's name and on chat replies to him; subagents too
+- [write-like-andrew-skill](write-like-andrew-skill.md) — The write-like-andrew skill lives in the repo at .claude/skills/write-like-andrew; run the skill and its scorer, and which samples are and aren't Andrew's voice
+- [yagni-kill-speculative-options](yagni-kill-speculative-options.md) — Delete rarely-correct opt-ins and escape hatches instead of keeping them as non-default options
+- [yarn-berry-gotchas](yarn-berry-gotchas.md) — Yarn 4 drops args after `--` in `yarn workspace`, root scripts shadow binaries, avoid `yarn run -TB`
