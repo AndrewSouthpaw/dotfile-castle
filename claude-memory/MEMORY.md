@@ -33,7 +33,7 @@
 - [no-presumed-legitimacy](no-presumed-legitimacy.md) — In review, apply every rule to every line; surviving an earlier review or cleanup pass proves nothing
 - [no-say-done](no-say-done.md) — Don't append `say done` to shell commands in docs or code
 - [no-secret-values-in-session](no-secret-values-in-session.md) — Secret managers - list names only, never print values into the transcript
-- [no-superset-pages](no-superset-pages.md) — Publish shareable HTML with the Artifact tool, never Superset Pages
+- [no-superset-pages](no-superset-pages.md) — Publish shareable HTML with the Artifact tool, never Superset Pages or Paradev Pages
 - [no-unasked-tickets](no-unasked-tickets.md) — Never file an issue-tracker ticket on my own initiative
 - [number-everything](number-everything.md) — Number every item in reports with one running sequence across the whole turn
 - [one-question-until-closed](one-question-until-closed.md) — In a design dialogue, answer the follow-up and stop; ask the next question only after an explicit go-ahead
@@ -64,3 +64,4 @@
 - [write-like-andrew-skill](write-like-andrew-skill.md) — The write-like-andrew skill lives in the repo at .claude/skills/write-like-andrew; run the skill and its scorer, and which samples are and aren't Andrew's voice
 - [yagni-kill-speculative-options](yagni-kill-speculative-options.md) — Delete rarely-correct opt-ins and escape hatches instead of keeping them as non-default options
 - [yarn-berry-gotchas](yarn-berry-gotchas.md) — Yarn 4 drops args after `--` in `yarn workspace`, root scripts shadow binaries, avoid `yarn run -TB`
+- [superset-hooks-config-dirs](superset-hooks-config-dirs.md) — Superset/paradev status hooks live only in ~/.claude/settings.json; copy them to ~/.claude-sb and ~/.claude-personal
